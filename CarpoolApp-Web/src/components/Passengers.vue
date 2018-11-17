@@ -25,7 +25,7 @@
 
 <style>
 
-/* Navigations bar */
+/* Navigation bar */
 .topnav a {
   color: #585858;
   text-align: center;
