@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import CarpoolappHomePage from '@/components/CarpoolappHomePage'
 import Passengers from '@/components/Passengers'
+import Driver from '@/components/Drivers'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/passengers',
       name: 'Passengers',
       component: Passengers
+    },
+    {
+      path: '/drivers',
+      name: 'Drivers',
+      component: Drivers
     }
   ]
 })
