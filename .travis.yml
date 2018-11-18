@@ -7,6 +7,6 @@ node_js:
 
 install:
   - npm i -g npm@6.4.1
-  - npm ci
+  - npm install
 
 cache: npm
