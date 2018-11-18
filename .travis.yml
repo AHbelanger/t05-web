@@ -1,10 +1,12 @@
 language: node_js
+os:
+  - osx
+  - linux
 node_js:
-- "10.13.0"
+  - "10.13.0"
 
-before_install:
-- npm -g install npm@6.4.1
-
-
+install:
+  - npm i -g npm@6.4.1
+  - npm ci
 
 cache: npm
