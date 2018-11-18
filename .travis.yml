@@ -4,6 +4,7 @@ os:
   - linux
 node_js:
   - "10.13.0"
+sudo: false
 
 install:
   - npm i -g npm@6.4.1
