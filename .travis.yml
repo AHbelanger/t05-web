@@ -4,7 +4,7 @@ node_js:
 sudo: false
 
 install:
-  - npm i -g npm@6.4.1
+  - npm i -g @vue/cli
   - npm install
 
 cache: npm
