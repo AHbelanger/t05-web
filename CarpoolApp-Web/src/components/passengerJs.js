@@ -23,11 +23,23 @@ function PassengerDto(name) {
     this.stops = []
 }
 
+function RoutesDto(id) {
+    this.id = id
+    this.price = undefined
+    this.isActive = undefined
+    this.isCompleted = undefined
+    this.stops = []
+    this.driver = undefined
+    this.passenger = []
+    this.vehicle = undefined
+}
+
 export default {
     name: 'passengers',
     data() {
         return {
             passengers: [],
+            searchPassengers: [],
             newPassengers: '',
             errorPassenger: '',
             response: []
@@ -44,6 +56,7 @@ export default {
         //   .catch(e => {
         //     this.errorPassenger = e;
         //   });
+
         // Test participants
         const p1 = new PassengerDto('Zohn')
         const p2 = new PassengerDto('Jill')
@@ -69,8 +82,11 @@ export default {
         p4.totalKM = 57
         p5.totalKM = 115
 
+        p1.routes=[{"id":"4"}, {"id":"99"}, {"id":"17"}, {"id":"3"}]
+
         // Sample initial content
         this.passengers = [p1, p2, p3, p4, p5]
+        this.searchPassengers = this.passengers
     },
     methods: {
         //Sort passengers name
@@ -156,6 +172,22 @@ export default {
                 totalKmSorted = 0
                 
             }
+        },
+        search: function(){
+            var substring = document.getElementById("searchBox").value.toLowerCase();
+
+            var newPassengers = []
+
+            for(var i = 0; i < this.passengers.length; i++)
+            {
+                var curName = this.passengers[i].name.toLowerCase()
+                if(curName.includes(substring))
+                {
+                    newPassengers.push(this.passengers[i])
+                }
+                
+            }
+            this.searchPassengers = newPassengers;
         }
     }
 }

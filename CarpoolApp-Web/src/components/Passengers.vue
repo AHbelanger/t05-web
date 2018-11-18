@@ -15,21 +15,44 @@
 
 	</div>
    
+    <h1>List of Active Passengers</h1>
+
+    <!-- Select menu bar -->
+    <div class="selectMenu">    
+        <select>
+            <option value="All">All</option>
+            <option value="Active">Active</option>
+        </select>
+    </div>
+
+    <!-- Search bar -->
+    <div>
+        <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search"><br>
+    </div>
+
    <!-- Active participants table -->
    <div class="passengerTable" id="passengerTableId">
-        <h1>List of Active Passengers</h1>
+        
         <table id="myTable">
             <tr>
                 <th v-on:click="sortName">Name</th>
                 <th v-on:click="sortID">ID</th>
                 <th v-on:click="sortPrice">Averaige Price Paid Per Km</th>
                 <th v-on:click="sortTotalKM">Total Distance Traveled</th>
+                <th>Routes</th>
             </tr>
             <tr v-for="passenger in passengers">
                 <td>{{ passenger.name }}</td>
                 <td>{{ passenger.id }}</td>
                 <td>{{ passenger.averagePrice }}</td>
                 <td>{{ passenger.totalKM }}</td>
+                <td id="routes">
+                    <ul>
+                        <li v-for="route in passenger.routes">
+                            {{route.id}}
+                        </li>
+                    </ul>
+                </td>
             </tr>
         </table>
 
@@ -64,19 +87,28 @@
   color: red;
 }
 
-/* Participants Table */
-.passengerTable h1 {
+/* Table title */
+h1 {
   padding-top: 1em;
   font-family: Helvetica, Arial;
   font-size: 2em;
   text-transform: uppercase;
 }
 
+/* Select menu */
+
+
+/* Participants Table */
+
 .passengerTable table {
   margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
+}
+
+.passengerTable tr:hover {
+    background-color: #f5f5f5;
 }
 
 .passengerTable th,
@@ -93,5 +125,9 @@ td {
 
 .passengerTable th:hover{
     color: blue;
+}
+
+.routes {
+    text-align: left;
 }
 </style>
