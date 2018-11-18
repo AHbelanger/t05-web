@@ -21,29 +21,18 @@
         <table id="myTable">
             <tr>
                 <th v-on:click="sortName">Name</th>
-                <th>ID</th>
-                <th>Averaige Price Paid Per Km</th>
-                <th>Total Distance Traveled</th>
-            </tr>
-            <tr class="item">
-                <td>Roger Zhang</td>
-                <td>5</td>
-                <td>2</td>
-                <td>50000</td>
+                <th v-on:click="sortID">ID</th>
+                <th v-on:click="sortPrice">Averaige Price Paid Per Km</th>
+                <th v-on:click="sortTotalKM">Total Distance Traveled</th>
             </tr>
             <tr v-for="passenger in passengers">
                 <td>{{ passenger.name }}</td>
                 <td>{{ passenger.id }}</td>
-                <td>{{ passenger.averagePaidPerKm }}</td>
-                <td>{{ passenger.totalKm }}</td>
+                <td>{{ passenger.averagePrice }}</td>
+                <td>{{ passenger.totalKM }}</td>
             </tr>
         </table>
 
-    </div>
-
-    <div>
-        <!-- `greet` is the name of a method defined below -->
-        <button v-on:click="sortName">Sort</button>
     </div>
 
     <!-- Error -->
@@ -99,6 +88,10 @@ td {
 }
 
 .passengerTable th{
-    cursor:grab;
+    cursor:pointer;
+}
+
+.passengerTable th:hover{
+    color: blue;
 }
 </style>
