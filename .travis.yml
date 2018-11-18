@@ -4,7 +4,7 @@ node_js:
 
 
 install:
-  - npm i -g @vue/cli
+  - npm i -g npm@6.4.1
   - npm install
 
 cache: npm
