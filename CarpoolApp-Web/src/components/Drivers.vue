@@ -15,8 +15,8 @@
 	</div>
 
 
-  <input type="text" name="firstname" id="searchBox"><br>
-  <button v-on:click="search()">Submit</button>
+  <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search()"><br>
+  <!-- <button v-on:click="search()">Submit</button> -->
 
 
 
