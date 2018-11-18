@@ -41,7 +41,7 @@
                 <th v-on:click="sortTotalKM">Total Distance Traveled</th>
                 <th>Routes</th>
             </tr>
-            <tr v-for="passenger in passengers">
+            <tr v-for="passenger in searchPassengers">
                 <td>{{ passenger.name }}</td>
                 <td>{{ passenger.id }}</td>
                 <td>{{ passenger.averagePrice }}</td>

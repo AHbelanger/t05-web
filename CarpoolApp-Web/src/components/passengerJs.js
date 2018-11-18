@@ -96,7 +96,7 @@ export default {
             totalKmSorted = 0
 
             if(nameSorted == 0){
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     var x = a.name.toLowerCase();
                     var y = b.name.toLowerCase();
                     if (x < y) {return -1;}
@@ -105,7 +105,7 @@ export default {
                 });
                 nameSorted = 1;
             } else {
-                this.passengers.reverse(function(a, b){
+                this.searchPassengers.reverse(function(a, b){
                     var x = a.name.toLowerCase();
                     var y = b.name.toLowerCase();
                     if (x < y) {return -1;}
@@ -123,12 +123,12 @@ export default {
             totalKmSorted = 0
 
             if(idSorted == 0){
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return a.id - b.id
                 });
                 idSorted = 1
             } else {
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return b.id - a.id
                 });
                 idSorted = 0
@@ -142,12 +142,12 @@ export default {
             totalKmSorted = 0
 
             if(priceSorted == 0){
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return a.averagePrice - b.averagePrice
                 });
                 priceSorted = 1
             } else {
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return b.averagePrice - a.averagePrice
                 });
                 priceSorted = 0
@@ -161,12 +161,12 @@ export default {
             priceSorted = 0
 
             if(totalKmSorted == 0){
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return a.totalKM - b.totalKM
                 });
                 totalKmSorted = 1
             } else {
-                this.passengers.sort(function(a, b){
+                this.searchPassengers.sort(function(a, b){
                     return b.totalKM - a.totalKM
                 });
                 totalKmSorted = 0
