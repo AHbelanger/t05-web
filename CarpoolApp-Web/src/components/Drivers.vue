@@ -3,8 +3,8 @@
 <div id="carpoolMainPage">
 
 <!-- Navigation bar  -->
-  <div class="topnav" id="main_nav">
-	  
+ 
+  <div class="topnav" id="main_nav">  
     <router-link to="home">Home</router-link>
 	  <a href="https://github.com/ECSE321-Fall2018/t05/wiki"  target="_blank">About</a>
 	  <a href="">Our Application</a>
@@ -12,14 +12,33 @@
     <router-link to="passengers">Passengers</router-link>
 	  <router-link to="drivers">Drivers</router-link>
 	  <router-link to="">Routes</router-link>
-
 	</div>
-   
+
+  <div class="driverTable" id="driverTableId">
+    <h1>List of Active Drivers</h1>
+    <table id="myTable">
+      <tr>
+        <th v-on:click="sortName">Name</th>
+        <th v-on:click="sortID">ID</th>
+        <th v-on:click="sortPrice">Average Price Per Km</th>
+        <th v-on:click="sortTotalKM">Total Distance Traveled</th>
+      </tr>
+      <tr v-for="driver in drivers" v-bind:id="driver.id">
+        <td>{{ driver.name }}</td>
+        <td>{{ driver.id }}</td>
+        <td>{{ driver.averagePrice }}</td>
+        <td>{{ driver.totalKM }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <span v-if="errorDriver" style="color:red">Error: {{errorDriver}} </span>
+
 </div>
 
 </template>
 
-<script>
+<script src="./DriversLogic.js">
   // TODO
 </script>
 
@@ -40,4 +59,29 @@
   color: red;
 }
 
+/* Drivers Table */
+.driverTable h1 {
+  padding-top: 1em;
+  font-family: Helvetica, Arial;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.driverTable table {
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+.driverTable th,td {
+  font-family: Helvetica, Arial;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid black;
+}
+.driverTable th{
+    cursor:pointer;
+}
+.driverTable th:hover{
+    color: blue;
+}
 </style>

@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import CarpoolappHomePage from '@/components/CarpoolappHomePage'
 import Passengers from '@/components/Passengers'
-import Driver from '@/components/Drivers'
+import Drivers from '@/components/Drivers'
 
 Vue.use(Router)
 
