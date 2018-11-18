@@ -10,6 +10,7 @@ var AXIOS = axios.create({
     headers: { 'Access-Control-Allow-Origin': frontendUrl }
 })
 
+//boolean for reverse or normal sort
 var nameSorted = 0
 var idSorted = 0
 var totalKmSorted = 0
@@ -75,6 +76,7 @@ export default {
             this.searchDrivers = this.drivers
     },
     methods: {
+        //sort searched driver list by name
         sortName: function () {
             idSorted = 0
             priceSorted = 0
@@ -82,7 +84,7 @@ export default {
 
 
             if(nameSorted == 0){
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     var x = a.name.toLowerCase();
                     var y = b.name.toLowerCase();
                     if (x < y) {return -1;}
@@ -91,7 +93,7 @@ export default {
                 });
                 nameSorted = 1;
             } else {
-                this.drivers.reverse(function(a, b){
+                this.searchDrivers.reverse(function(a, b){
                     var x = a.name.toLowerCase();
                     var y = b.name.toLowerCase();
                     if (x < y) {return -1;}
@@ -102,61 +104,62 @@ export default {
             }
           },
 
-        // Sort passengers by id
+        // Sort seached driver list by id
         sortID: function(){
             nameSorted = 0
             priceSorted = 0
             totalKmSorted = 0
 
             if(idSorted == 0){
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return a.id - b.id
                 });
                 idSorted = 1
             } else {
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return b.id - a.id
                 });
                 idSorted = 0
                 
             }
         },
-        //Sort passenger by total km
+        //Sort searched driver by total km
         sortTotalKM: function(){
             nameSorted = 0
             idSorted = 0
             priceSorted = 0
 
             if(totalKmSorted == 0){
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return a.totalKM - b.totalKM
                 });
                 totalKmSorted = 1
             } else {
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return b.totalKM - a.totalKM
                 });
                 totalKmSorted = 0
             }
         },
-        //Sort passenger by price
+        //Sort searched driver by price
         sortPrice: function(){
             nameSorted = 0
             idSorted = 0
             totalKmSorted = 0
 
             if(priceSorted == 0){
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return a.averagePrice - b.averagePrice
                 });
                 priceSorted = 1
             } else {
-                this.drivers.sort(function(a, b){
+                this.searchDrivers.sort(function(a, b){
                     return b.averagePrice - a.averagePrice
                 });
                 priceSorted = 0
             }
         },
+        //seach by substring
         search: function(){
             var substring = document.getElementById("searchBox").value.toLowerCase();
 
