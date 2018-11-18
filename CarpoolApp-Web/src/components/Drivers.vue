@@ -14,6 +14,12 @@
 	  <router-link to="">Routes</router-link>
 	</div>
 
+
+  <input type="text" name="firstname" id="searchBox"><br>
+  <button v-on:click="search()">Submit</button>
+
+
+
   <div class="driverTable" id="driverTableId">
     <h1>List of Active Drivers</h1>
     <table id="myTable">
@@ -23,7 +29,7 @@
         <th v-on:click="sortPrice">Average Price Per Km</th>
         <th v-on:click="sortTotalKM">Total Distance Traveled</th>
       </tr>
-      <tr v-for="driver in drivers" v-bind:id="driver.id">
+      <tr v-for="driver in searchDrivers" v-bind:id="driver.id">
         <td>{{ driver.name }}</td>
         <td>{{ driver.id }}</td>
         <td>{{ driver.averagePrice }}</td>

@@ -29,6 +29,7 @@ export default {
     data() {
         return {
             drivers: [],
+            searchDrivers: [],
             errorDriver: '',
             response: []
         }
@@ -71,6 +72,7 @@ export default {
             p5.totalKM = 107
 
             this.drivers = [p1,p2,p3,p4,p5]
+            this.searchDrivers = this.drivers
     },
     methods: {
         sortName: function () {
@@ -154,6 +156,22 @@ export default {
                 });
                 priceSorted = 0
             }
+        },
+        search: function(){
+            var substring = document.getElementById("searchBox").value.toLowerCase();
+
+            var newDrivers = []
+
+            for(var i = 0; i < this.drivers.length; i++)
+            {
+                var curName = this.drivers[i].name.toLowerCase()
+                if(curName.includes(substring))
+                {
+                    newDrivers.push(this.drivers[i])
+                }
+                
+            }
+            this.searchDrivers = newDrivers;
         }
     }  
 }
