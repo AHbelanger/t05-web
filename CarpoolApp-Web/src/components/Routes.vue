@@ -15,6 +15,17 @@
 
 	</div>
 
+    <div>
+        <b>Start X:</b>
+        <input type="text" name="x" placeholder="Search..." id="searchBoxStartX" v-on:change="search">
+        <b>Start Y:</b>
+        <input type="text" name="y" placeholder="Search..." id="searchBoxStartY" v-on:change="search">
+        <b>End X:</b>
+        <input type="text" name="x" placeholder="Search..." id="searchBoxEndX" v-on:change="search">
+        <b>End X:</b>
+        <input type="text" name="y" placeholder="Search..." id="searchBoxEndY" v-on:change="search"><br>
+    </div>
+
 <!-- Active Routes Table -->
     <div class="routeTable" id="routeTableId">
         <h1>List of Active Routes</h1>
@@ -22,14 +33,18 @@
             <tr>
                 <th v-on:click="sortName">Driver Name</th>
                 <th v-on:click="sortID">ID</th>
-                <th v-on:click="sortstartPoint">Starting Point</th>
-                <th v-on:click="sortDestination">Destination</th>
+                <th v-on:click="sortstartPointX">Starting Point X</th>
+                <th v-on:click="sortstartPointY">Starting Point Y</th>
+                <th v-on:click="sortDestinationX">Destination X</th>
+                <th v-on:click="sortDestinationY">Destination Y</th>
             </tr>
-            <tr v-for="route in routes">
+            <tr v-for="route in searchRoutes">
                 <td>{{ route.driverName }}</td>
                 <td>{{ route.id }}</td>
-                <td>{{ route.startPoint }}</td>
-                <td>{{ route.destination }}</td>
+                <td>{{ route.startX }}</td>
+                <td>{{ route.startY }}</td>
+                <td>{{ route.endX }}</td>
+                <td>{{ route.endY }}</td>
             </tr>
         </table>  
     
