@@ -92,7 +92,7 @@ export default {
             destinationYSorted = 0
 
             if(nameSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     var x = a.driverName.toLowerCase();
                     var y = b.driverName.toLowerCase();
                     if (x < y) {return -1;}
@@ -101,7 +101,7 @@ export default {
                 });
                 nameSorted = 1;
             } else {
-                this.routes.reverse(function(a, b){
+                this.searchRoutes.reverse(function(a, b){
                     var x = a.driverName.toLowerCase();
                     var y = b.driverName.toLowerCase();
                     if (x < y) {return -1;}
@@ -120,12 +120,12 @@ export default {
             destinationYSorted = 0
 
             if(idSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return a.id - b.id
                 });
                 idSorted = 1
             } else {
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return b.id - a.id
                 });
                 idSorted = 0
@@ -140,12 +140,12 @@ export default {
             destinationYSorted = 0
 
             if(startXSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return a.startX -b.startX
                 });
                 startXSorted = 1;
             } else {
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return b.startX - a.startX
                 });
                 startXSorted = 0;
@@ -159,12 +159,12 @@ export default {
             destinationYSorted = 0
 
             if(startYSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return a.startY -b.startY
                 });
                 startYSorted = 1;
             } else {
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return b.startY - a.startY
                 });
                 startYSorted = 0;
@@ -178,12 +178,12 @@ export default {
             destinationYSorted = 0
 
             if(destinationXSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return a.endX - b.endX
                 });
                 destinationXSorted = 1;
             } else {
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return b.endX - a.endX
                 });
                 destinationXSorted = 0;
@@ -197,12 +197,12 @@ export default {
             destinationXSorted = 0
 
             if(destinationYSorted == 0){
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return a.endY - b.endY
                 });
                 destinationYSorted = 1;
             } else {
-                this.routes.sort(function(a, b){
+                this.searchRoutes.sort(function(a, b){
                     return b.endY - a.endY
                 });
                 destinationYSorted = 0;
