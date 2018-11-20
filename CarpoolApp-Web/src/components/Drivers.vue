@@ -28,12 +28,20 @@
         <th v-on:click="sortID">ID</th>
         <th v-on:click="sortPrice">Average Price Per Km</th>
         <th v-on:click="sortTotalKM">Total Distance Traveled</th>
+        <th>Routes</th>
       </tr>
       <tr v-for="driver in searchDrivers" v-bind:id="driver.id">
         <td>{{ driver.name }}</td>
         <td>{{ driver.id }}</td>
         <td>{{ driver.averagePrice }}</td>
         <td>{{ driver.totalKM }}</td>
+        <td class="routeList" id="routes">
+                    <ul>
+                        <li v-for="route in driver.routes" v-on:click="routeInfo(route)">
+                            {{route.id}}
+                        </li>
+                    </ul>
+                </td>
       </tr>
     </table>
   </div>
@@ -89,5 +97,8 @@
 }
 .driverTable th:hover{
     color: blue;
+}
+.routeList li:hover{
+  color: blue;
 }
 </style>

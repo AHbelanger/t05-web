@@ -50,6 +50,7 @@ export default {
             p1.name = "An Khang"
             p1.averagePrice = 342
             p1.totalKM = 134
+            p1.routes=[{"id":"4", "x":"5"}, {"id":"99", "x":"4"}, {"id":"17", "x":"32"}, {"id":"3", "x":"52"}]
            
             const p2 = new Driver("2")
             p2.name = "Antoine"
@@ -175,6 +176,9 @@ export default {
                 
             }
             this.searchDrivers = newDrivers;
+        },
+        routeInfo: function(route){
+            alert("ID: " + route.id + "\nX: " + route.x)
         }
     }  
 }
