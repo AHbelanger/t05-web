@@ -6,7 +6,7 @@ var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPo
 
 var AXIOS = axios.create({
     baseURL: backendUrl,
-    headers: { 'Access-Control-Allow-Origin': frontendUrl }
+    headers: { 'Access-Control-Allow-Origin': '*' }
 })
 
 var nameSorted = 0
@@ -47,15 +47,15 @@ export default {
     },
     // Getting passengers from backend
     created: function () {
-        // // Initializing passengers from backend
-        //   AXIOS.get(`/passengers`)
-        //   .then(response => {
-        //     // JSON responses are automatically parsed.
-        //     this.passengers = response.data
-        //   })
-        //   .catch(e => {
-        //     this.errorPassenger = e;
-        //   });
+        // Initializing passengers from backend
+          AXIOS.get(`/passengers`)
+          .then(response => {
+            // JSON responses are automatically parsed.
+            this.passengers = response.data
+          })
+          .catch(e => {
+            this.errorPassenger = e;
+          });
 
         // Test participants
         const p1 = new PassengerDto('Zohn')
@@ -84,8 +84,13 @@ export default {
 
         p1.routes=[{"id":"4"}, {"id":"99"}, {"id":"17"}, {"id":"3"}]
 
-        // Sample initial content
-        this.passengers = [p1, p2, p3, p4, p5]
+        // // Sample initial content
+        // this.passengers = [p1, p2, p3, p4, p5]
+        this.passengers.push(p1)
+        this.passengers.push(p2)
+        this.passengers.push(p3)
+        this.passengers.push(p4)
+        this.passengers.push(p5)
         this.searchPassengers = this.passengers
     },
     methods: {
