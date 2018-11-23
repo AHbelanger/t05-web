@@ -103,13 +103,13 @@ h1 {
 /* Search Bar */
 .searchBar{
     float: left;   
-    padding-left: 29.35em;  
+    padding-left: 30.6%;  
 }
 
 /* Select menu */
 .selectMenu{
     float: right;
-    padding-right: 29.4em;
+    padding-right: 30.5%;
     padding-top: 0.3em;
 }
 
