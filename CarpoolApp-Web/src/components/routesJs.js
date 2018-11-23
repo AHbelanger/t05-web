@@ -76,11 +76,7 @@ export default {
         r3.startY = 6
         r3.endX = 10
         r3.endY = 12
-<<<<<<< HEAD
-        r3.date = new Date("2018-10-20 8:10")
-=======
         r3.date = new Date("2018-10-20 15:12")
->>>>>>> ebd9fc330eff22155f231accdf382bcb6a399c5a
 
         r4.driverName = "Roger"
         r4.startX = 53
