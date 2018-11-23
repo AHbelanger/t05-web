@@ -38,7 +38,7 @@
             <tr>
                 <th v-on:click="sortName">Name</th>
                 <th v-on:click="sortID">ID</th>
-                <th v-on:click="sortPrice">Averaige Price Paid Per Km</th>
+                <th v-on:click="sortPrice">Average Price Paid Per Km</th>
                 <th v-on:click="sortTotalKM">Total Distance Traveled</th>
                 <th>Routes</th>
             </tr>
