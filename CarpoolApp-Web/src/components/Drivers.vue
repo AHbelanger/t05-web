@@ -16,16 +16,24 @@
 
     <h1>List of Drivers</h1>
 
-    <!-- Select menu bar -->
-    <div class="selectMenu">    
-        <select id="selectActive" v-on:change="select">
-            <option value="All">All</option>
-            <option value="Active">Active</option>
-        </select>
+  <div class="barContainer">
+
+      <!-- Select menu bar -->
+      <div class="selectMenu">    
+          <select id="selectActive" v-on:change="select">
+              <option value="All">All</option>
+              <option value="Active">Active</option>
+          </select>
+      </div>
+
+    <!-- Search bar -->
+    <div class="searchBar">
+      <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search()"><br>
     </div>
 
-  <!-- Search bar -->
-  <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search()"><br>
+    <div class="clearfix"></div>
+
+  </div>
 
   <!-- Driver table -->
   <div class="driverTable" id="driverTableId">
@@ -81,17 +89,36 @@
   color: red;
 }
 
-/* Drivers Table */
-.driverTable h1 {
+/* Title */
+h1 {
   padding-top: 1em;
   font-family: Helvetica, Arial;
   font-size: 2em;
   text-transform: uppercase;
 }
+
+/* Bar container */
+.barContainer{
+  padding-top: 1%;
+}
+
+/* Select menu */
+.selectMenu{
+    float: right;
+    padding-right: 31.1%;
+    padding-top: 0.4%
+}
+
+/* Search bar */
+.searchBar{
+  float: left;
+  padding-left: 31.2%;
+}
+
+/* Drivers Table */
 .driverTable table {
   margin-top: 0.2em;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 31.2%;
   border: 1px solid black;
 }
 .driverTable th,td {
@@ -108,5 +135,9 @@
 }
 .routeList li:hover{
   color: blue;
+}
+
+.clearfix{
+    clear:both
 }
 </style>

@@ -21,23 +21,32 @@
     <div class="routeTable" id="routeTableId">
         <h1>List of Active Routes</h1>
 
+
         <div class="searchCoordinate">
-            <b>Start X:</b>
-            <input type="text" name="x" placeholder="Search..." id="searchBoxStartX" v-on:change="search">
-            <b>Start Y:</b>
-            <input type="text" name="y" placeholder="Search..." id="searchBoxStartY" v-on:change="search">
-            <b>End X:</b>
-            <input type="text" name="x" placeholder="Search..." id="searchBoxEndX" v-on:change="search">
-            <b>End X:</b>
-            <input type="text" name="y" placeholder="Search..." id="searchBoxEndY" v-on:change="search"><br>
+            <div class="startingPoint">
+                <p>Starting coordinate:</p>
+                <input type="text" name="x" placeholder="x..." id="searchBoxStartX" v-on:change="search">
+                <input type="text" name="y" placeholder="y..." id="searchBoxStartY" v-on:change="search">
+            </div>
+            <div class="endPoint">
+                <p>Destination coordinate:</p>
+                <input type="text" name="x" placeholder="x..." id="searchBoxEndX" v-on:change="search">
+                <input type="text" name="y" placeholder="y..." id="searchBoxEndY" v-on:change="search">
+            </div>
         </div>
-        <div>
-            <b>Date 1:</b>
-            <input type="text" name="date1" placeholder="YYYY-MM-DD HH:MM" id="date1">
-            <b>Date 2:</b>
-            <input type="text" name="date2" placeholder="YYYY-MM-DD HH:MM" id="date2">
-            <button type="button" v-on:click="time">Time Frame!</button><br>
+        <div class="searchDates">
+            <div class="startDate">
+                <p>Date 1:</p>
+                <input type="text" name="date1" placeholder="YYYY-MM-DD HH:MM" id="date1">
+            </div>
+            <div class="endDate">
+                <p>Date 2:</p>
+                <input type="text" name="date2" placeholder="YYYY-MM-DD HH:MM" id="date2">
+                <button type="button" v-on:click="time">Time Frame!</button>
+            </div>
         </div>
+
+        <div class="clearfix"></div>
 
 
         <table id="myTable">
@@ -92,7 +101,43 @@
 }
 
 .searchCoordinate input{
-    width: 6%;
+    width: 15%;
+}
+
+/* Corrdinate search bars */
+.searchCoordinate{
+    float: left;
+    padding-left: 15.2%
+}
+
+.startingPoint p{
+    padding-left: 3%;
+    margin-bottom: -0.5%
+}
+
+.endPoint p{
+    padding-left: 9%;
+    margin-bottom: -0.5%
+}
+
+/* Date and time search bars */
+.searchDates{
+    float: right;
+    padding-right: 24.4%; 
+}
+
+.startDate p{
+    padding-right: 71%;
+    margin-bottom: -1%;
+}
+
+.startDate {
+    padding-right: 40%;
+}
+
+.endDate p{
+    padding-right:83%;
+    margin-bottom: -1%;
 }
 
 /*Routes table*/
@@ -104,7 +149,7 @@
 }
 
 .routeTable table{
-     margin-top: 3em;
+  margin-top: 1%;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
@@ -124,6 +169,10 @@ td{
 
 .routeTable th:hover{
     color: blue;
+}
+
+.clearfix{
+    clear:both
 }
 
 </style>
