@@ -40,15 +40,15 @@ export default {
     },
     // Getting passengers from backend
     created: function () {
-        // Initializing passengers from backend
-          AXIOS.get(`/ads`)
-          .then(response => {
-            // JSON responses are automatically parsed.
-            this.routes = response.data
-          })
-          .catch(e => {
-            this.errorRoute = e;
-          });
+        // // Initializing passengers from backend
+        //   AXIOS.get(`/ads`)
+        //   .then(response => {
+        //     // JSON responses are automatically parsed.
+        //     this.routes = response.data
+        //   })
+        //   .catch(e => {
+        //     this.errorRoute = e;
+        //   });
 
         //Test routes
 

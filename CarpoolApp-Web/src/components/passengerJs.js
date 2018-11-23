@@ -47,15 +47,15 @@ export default {
     },
     // Getting passengers from backend
     created: function () {
-        // Initializing passengers from backend
-          AXIOS.get(`/passengers`)
-          .then(response => {
-            // JSON responses are automatically parsed.
-            this.passengers = response.data
-          })
-          .catch(e => {
-            this.errorPassenger = e;
-          });
+        // // Initializing passengers from backend
+        //   AXIOS.get(`/passengers`)
+        //   .then(response => {
+        //     // JSON responses are automatically parsed.
+        //     this.passengers = response.data
+        //   })
+        //   .catch(e => {
+        //     this.errorPassenger = e;
+        //   });
 
         // Test participants
         const p1 = new PassengerDto('Zohn')
