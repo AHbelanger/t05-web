@@ -9,9 +9,9 @@
 	  <a href="https://github.com/ECSE321-Fall2018/t05/wiki"  target="_blank">About</a>
 	  <a href="">Our Application</a>
 
-    <router-link to="passengers">Passengers</router-link>
-	  <router-link to="drivers">Drivers</router-link>
-	  <router-link to="">Routes</router-link>
+    <router-link to="Passengers">Passengers</router-link>
+	  <router-link to="Drivers">Drivers</router-link>
+	  <router-link to="Routes">Routes</router-link>
 	</div>
 
     <h1>List of Drivers</h1>

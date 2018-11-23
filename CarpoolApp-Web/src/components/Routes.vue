@@ -10,7 +10,7 @@
 	  <a href="">Our Application</a>
 
       <router-link to="Passengers">Passengers</router-link>
-	  <router-link to="">Drivers</router-link>
+	  <router-link to="Drivers">Drivers</router-link>
 	  <router-link to="Routes">Routes</router-link>
 
 	</div>
@@ -44,6 +44,7 @@
                 <th v-on:click="sortstartPointY">Starting Point Y</th>
                 <th v-on:click="sortDestinationX">Destination X</th>
                 <th v-on:click="sortDestinationY">Destination Y</th>
+                <th>Date and time</th>
             </tr>
             <tr v-for="route in searchRoutes">
                 <td>{{ route.driverName }}</td>
@@ -52,7 +53,7 @@
                 <td>{{ route.startY }}</td>
                 <td>{{ route.endX }}</td>
                 <td>{{ route.endY }}</td>
-                <td>{{ route.date.toString() }}</td>
+                <td>{{ route.date.getFullYear() + "/" + route.date.getMonth() + "/" + route.date.getDate() + " " + route.date.getHours() + ":" + route.date.getMinutes() }}</td>
             </tr>
         </table>  
     
@@ -70,6 +71,7 @@
 </script>
 
 <style>
+
 /* Navigation bar */
 .topnav a {
   color: #585858;
