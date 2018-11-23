@@ -8,9 +8,8 @@
       <router-link to="home">Home</router-link>
 	  <a href="https://github.com/ECSE321-Fall2018/t05/wiki"  target="_blank">About</a>
 	  <a href="">Our Application</a>
-
       <router-link to="Passengers">Passengers</router-link>
-	  <router-link to="">Drivers</router-link>
+	  <router-link to="drivers">Drivers</router-link>
 	  <router-link to="Routes">Routes</router-link>
 
 	</div>

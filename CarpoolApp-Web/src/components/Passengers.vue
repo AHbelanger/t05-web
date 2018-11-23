@@ -3,17 +3,14 @@
 <div id="passengerPage">
 
 <!-- Navigation bar  -->
-    <div class="topnav" id="main_nav">
-	  
-      <router-link to="home">Home</router-link>
+  <div class="topnav" id="main_nav"> 
+    <router-link to="home">Home</router-link>
 	  <a href="https://github.com/ECSE321-Fall2018/t05/wiki"  target="_blank">About</a>
 	  <a href="">Our Application</a>
-
       <router-link to="Passengers">Passengers</router-link>
-	  <router-link to="">Drivers</router-link>
+	  <router-link to="drivers">Drivers</router-link>
 	  <router-link to="Routes">Routes</router-link>
-
-	</div>
+    </div>
    
     <h1>List of Active Passengers</h1>
 

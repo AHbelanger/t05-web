@@ -4,6 +4,8 @@ import Hello from '@/components/Hello'
 import CarpoolappHomePage from '@/components/CarpoolappHomePage'
 import Passengers from '@/components/Passengers'
 import Routes from '@/components/Routes'
+import Drivers from '@/components/Drivers'
+
 
 Vue.use(Router)
 
@@ -28,6 +30,11 @@ export default new Router({
       path: '/routes',
       name: 'Routes',
       component: Routes
+    },
+    {
+      path: '/drivers',
+      name: 'Drivers',
+      component: Drivers
     }
   ]
 })
