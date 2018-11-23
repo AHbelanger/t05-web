@@ -19,7 +19,7 @@
 
     <!-- Select menu bar -->
     <div class="selectMenu">    
-        <select>
+        <select id="selectActive" v-on:change="select">
             <option value="All">All</option>
             <option value="Active">Active</option>
         </select>

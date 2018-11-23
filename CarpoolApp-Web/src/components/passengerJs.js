@@ -173,6 +173,7 @@ export default {
                 
             }
         },
+        //Search passengers by their names
         search: function(){
             var substring = document.getElementById("searchBox").value.toLowerCase();
 
@@ -187,7 +188,23 @@ export default {
                 }
                 
             }
-            this.searchPassengers = newPassengers;
+            this.searchPassengers = newPassengers
+        },
+        //Display active or all passengers
+        select: function(){
+            var state = document.getElementById("selectActive").value.toLowerCase();
+            if(state == "all"){
+                this.search()
+            } else {
+                var activePassengers = []
+              
+                for(var i = 0; i < this.searchPassengers.length; i++){
+                    if(this.searchPassengers[i].routes != 0){
+                        activePassengers.push(this.searchPassengers[i])
+                    }
+                }
+                this.searchPassengers = activePassengers;
+            }
         }
     }
 }
