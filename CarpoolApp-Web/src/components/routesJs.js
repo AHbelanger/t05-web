@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { timingSafeEqual } from 'crypto';
 var config = require('../../config')
 
 var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
@@ -6,7 +7,7 @@ var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPo
 
 var AXIOS = axios.create({
     baseURL: backendUrl,
-    headers: { 'Access-Control-Allow-Origin': frontendUrl }
+    headers: { 'Access-Control-Allow-Origin': '*' }
 })
 
 var nameSorted = 0
@@ -23,6 +24,7 @@ function routeDto (id){
     this.startY = undefined
     this.endX = undefined
     this.endY = undefined
+    this.date = undefined
 }
 
 export default {
@@ -38,15 +40,15 @@ export default {
     },
     // Getting passengers from backend
     created: function () {
-        // // Initializing passengers from backend
-        //   AXIOS.get(`/passengers`)
-        //   .then(response => {
-        //     // JSON responses are automatically parsed.
-        //     this.passengers = response.data
-        //   })
-        //   .catch(e => {
-        //     this.errorPassenger = e;
-        //   });
+        // Initializing passengers from backend
+          AXIOS.get(`/ads`)
+          .then(response => {
+            // JSON responses are automatically parsed.
+            this.routes = response.data
+          })
+          .catch(e => {
+            this.errorRoute = e;
+          });
 
         //Test routes
 
@@ -60,26 +62,33 @@ export default {
         r1.startY = 33
         r1.endX = 7
         r1.endY = 34
+        r1.date = new Date("2018-11-20 5:10")
 
         r2.driverName = "Antoine"
         r2.startX = 14
         r2.startY = 61
         r2.endX = 8
         r2.endY = 3
+        r2.date = new Date("2018-11-20 6:10")
         
         r3.driverName = "Alexa"
         r3.startX = 4
         r3.startY = 6
         r3.endX = 10
         r3.endY = 12
+        r3.date = new Date("2018-10-20 5:10")
 
         r4.driverName = "Roger"
         r4.startX = 53
         r4.startY = 3
         r4.endX = 32
         r4.endY = 43
+        r4.date = new Date("2018-11-20 4:10")
 
-        this.routes = [r1, r2, r3, r4]
+        this.routes.push(r1)
+        this.routes.push(r2)
+        this.routes.push(r3)
+        this.routes.push(r4)
         this.searchRoutes = this.routes
     },
     methods: {
@@ -225,6 +234,23 @@ export default {
 
                 if(curStartX.includes(substringStartX) && curStartY.includes(substringStartY) && curEndX.includes(substringEndX) && curEndY.includes(substringEndY))
                 {
+                    newRoutes.push(this.routes[i])
+                }
+                
+            }
+            this.searchRoutes = newRoutes;
+        },
+        time: function(){
+            var date1 = new Date(document.getElementById("date1").value.toString())
+            var date2 = new Date(document.getElementById("date2").value.toString())
+
+            var newRoutes = []
+
+            for(var i = 0; i < this.routes.length; i++)
+            {
+                var curDate = this.routes[i].date
+
+                if(curDate>=date1 && curDate<=date2){
                     newRoutes.push(this.routes[i])
                 }
                 

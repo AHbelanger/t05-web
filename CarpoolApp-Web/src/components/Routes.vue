@@ -25,6 +25,13 @@
         <b>End X:</b>
         <input type="text" name="y" placeholder="Search..." id="searchBoxEndY" v-on:change="search"><br>
     </div>
+    <div>
+        <b>Date 1:</b>
+        <input type="text" name="date1" placeholder="YYYY-MM-DD HH:MM" id="date1">
+        <b>Date 2:</b>
+        <input type="text" name="date2" placeholder="YYYY-MM-DD HH:MM" id="date2">
+        <button type="button" v-on:click="time">Time Frame!</button><br>
+    </div>
 
 <!-- Active Routes Table -->
     <div class="routeTable" id="routeTableId">
@@ -45,13 +52,14 @@
                 <td>{{ route.startY }}</td>
                 <td>{{ route.endX }}</td>
                 <td>{{ route.endY }}</td>
+                <td>{{ route.date.toString() }}</td>
             </tr>
         </table>  
     
     </div>
 
     <!-- Error -->
-    <span v-if="errorPassenger" style="color:red">Error: {{errorPassenger}} </span>
+    <span v-if="errorRoute" style="color:red">Error: {{errorRoute}} </span>
 
 
 </div>
