@@ -74,7 +74,7 @@
 <script src="./routesJs.js">
 </script>
 
-<style>
+<style scoped>
 
 /* Navigation bar */
 .topnav a {

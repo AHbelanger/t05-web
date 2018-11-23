@@ -24,11 +24,10 @@
         </select>
     </div>
 
+  <!-- Search bar -->
   <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search()"><br>
-  <!-- <button v-on:click="search()">Submit</button> -->
 
-
-
+  <!-- Driver table -->
   <div class="driverTable" id="driverTableId">
     <table id="myTable">
       <tr>
@@ -54,6 +53,7 @@
     </table>
   </div>
 
+  <!-- Error code -->
   <span v-if="errorDriver" style="color:red">Error: {{errorDriver}} </span>
 
 </div>
@@ -61,10 +61,10 @@
 </template>
 
 <script src="./DriversLogic.js">
-  // TODO
+
 </script>
 
-<style>
+<style scoped>
 
 /* Navigation bar */
 .topnav a {

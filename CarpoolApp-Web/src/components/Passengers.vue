@@ -71,7 +71,7 @@
 </script>
 
 
-<style>
+<style scoped>
 /* Navigation bar */
 .topnav a {
   color: #585858;
@@ -100,11 +100,23 @@ h1 {
     padding-top:1em;
 }
 
+.selectMenu{
+    float: right;
+    padding-right: 30.6%;
+    padding-top: 0.5%;
+}
+
+.searchBar{
+    float: left;
+    padding-left: 30.5%;
+}
+
 /* Participants Table */
 .passengerTable table {
-  margin-top: 0.2em;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0.2%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-left: 30.5%;
   border: 1px solid black;
 }
 
