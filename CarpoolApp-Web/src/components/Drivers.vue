@@ -5,10 +5,8 @@
 <!-- Navigation bar  -->
  
   <div class="topnav" id="main_nav">  
-    <router-link to="home">Home</router-link>
-	  <a href="https://github.com/ECSE321-Fall2018/t05/wiki"  target="_blank">About</a>
-	  <a href="">Our Application</a>
-
+    <router-link to="/">Home</router-link>
+	  <a href="https://github.com/ECSE321-Fall2018/t05-web/wiki"  target="_blank">About</a>
     <router-link to="Passengers">Passengers</router-link>
 	  <router-link to="Drivers">Drivers</router-link>
 	  <router-link to="Routes">Routes</router-link>

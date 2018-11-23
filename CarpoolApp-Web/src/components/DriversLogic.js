@@ -48,29 +48,29 @@ export default {
 
             const p1 = new Driver("1")
             p1.name = "An Khang"
-            p1.averagePrice = 342
+            p1.averagePrice = 5
             p1.totalKM = 134
             p1.routes=[{"id":"4", "startX":"5", "startY":"22", "endX":"2", "endY":"42"}, {"id":"99", "startX":"1", "startY":"78", "endX":"43", "endY":"25"}, {"id":"21","startX":"3", "startY":"76", "endX":"9", "endY":"12"}]
            
             const p2 = new Driver("2")
             p2.name = "Antoine"
-            p2.averagePrice = 541
+            p2.averagePrice = 1
             p2.totalKM = 980
 
             const p3 = new Driver("3")
             p3.name = "Roger"
-            p3.averagePrice = 512
+            p3.averagePrice = 10.99
             p3.totalKM = 18
 
             const p4 = new Driver("4")
             p4.name = "Alexa"
-            p4.averagePrice = 454
+            p4.averagePrice = 10.98
             p4.totalKM = 902
 
 
             const p5 = new Driver("5")
             p5.name = "Mike"
-            p5.averagePrice = 246
+            p5.averagePrice = 0.25
             p5.totalKM = 107
 
             this.drivers = [p1,p2,p3,p4,p5]
