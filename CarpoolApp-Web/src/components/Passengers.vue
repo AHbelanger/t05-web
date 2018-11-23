@@ -14,17 +14,21 @@
    
     <h1>List of Active Passengers</h1>
 
-    <!-- Select menu bar -->
-    <div class="selectMenu">    
-        <select id="selectActive" v-on:change="select">
-            <option value="All">All</option>
-            <option value="Active">Active</option>
-        </select>
-    </div>
+    <div class="barContainer">
+        <!-- Select menu bar -->
+        <div class="selectMenu">    
+            <select id="selectActive" v-on:change="select">
+                <option value="All">All</option>
+                <option value="Active">Active</option>
+            </select>
+        </div>
 
-    <!-- Search bar -->
-    <div>
-        <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search"><br>
+        <!-- Search bar -->
+        <div class="searchBar">
+            <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search"><br>
+        </div>
+    
+        <div class="clearfix"></div>
     </div>
 
    <!-- Active participants table -->
@@ -53,11 +57,10 @@
             </tr>
         </table>
 
-    </div>
+</div>
 
     <!-- Error -->
     <span v-if="errorPassenger" style="color:red">Error: {{errorPassenger}} </span>
-
 
 
 </div>
@@ -92,13 +95,28 @@ h1 {
   text-transform: uppercase;
 }
 
-/* Select menu */
+/* Bar container */
+.barContainer{
+    padding-top:1em;
+}
 
+/* Search Bar */
+.searchBar{
+    float: left;   
+    padding-left: 29.35em;  
+}
+
+/* Select menu */
+.selectMenu{
+    float: right;
+    padding-right: 29.4em;
+    padding-top: 0.3em;
+}
 
 /* Participants Table */
 
 .passengerTable table {
-  margin-top: 3em;
+  margin-top: 0.2em;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
@@ -126,6 +144,10 @@ td {
 
 .routes {
     text-align: left;
+}
+
+.clearfix{
+    clear:both
 }
 </style>
 
