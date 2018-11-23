@@ -28,7 +28,7 @@
     <img src="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.0-9/19105704_1481648448524563_6891814565629293334_n.jpg?_nc_cat=111&_nc_ht=scontent.fyhu1-1.fna&oh=50babae7de0ce226e679b1c2658f3b9f&oe=5C72D17D" alt="An Khang">
     <img src="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.0-9/17426085_1267275363362535_5560352914503949084_n.jpg?_nc_cat=103&_nc_ht=scontent.fyhu1-1.fna&oh=97b030a631a9517edc558357f24f3e19&oe=5CAD3EF6" alt="Roger">
     <img src="https://scontent.fyhu1-1.fna.fbcdn.net/v/t1.0-9/12243259_911292588956552_5916802848587616830_n.jpg?_nc_cat=104&_nc_ht=scontent.fyhu1-1.fna&oh=0f00e33a67a8d3af20738e9e2df8afff&oe=5CB11557" alt="Alexa">
-    <img src="https://files.slack.com/files-pri/TCYV9BH37-FEAUX9JV8/image.png" alt="Antoine">
+    <img src="https://www.instagram.com/p/BfE3byGFbfrMgnexqH4oE5GDVBsdR086H9Ap6w0/" alt="Antoine">
   </div>
 </div>
 
