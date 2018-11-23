@@ -14,6 +14,15 @@
 	  <router-link to="Routes">Routes</router-link>
 	</div>
 
+    <h1>List of Drivers</h1>
+
+    <!-- Select menu bar -->
+    <div class="selectMenu">    
+        <select id="selectActive" v-on:change="select">
+            <option value="All">All</option>
+            <option value="Active">Active</option>
+        </select>
+    </div>
 
   <input type="text" name="name" placeholder="Search..." id="searchBox" v-on:change="search()"><br>
   <!-- <button v-on:click="search()">Submit</button> -->
@@ -21,7 +30,6 @@
 
 
   <div class="driverTable" id="driverTableId">
-    <h1>List of Active Drivers</h1>
     <table id="myTable">
       <tr>
         <th v-on:click="sortName">Name</th>

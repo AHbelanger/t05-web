@@ -246,7 +246,7 @@ export default {
 
             var newRoutes = []
 
-            for(var i = 0; i < this.routes.length; i++)
+            for(var i = 0; i < this.searchRoutes.length; i++)
             {
                 var curDate = this.routes[i].date
 
