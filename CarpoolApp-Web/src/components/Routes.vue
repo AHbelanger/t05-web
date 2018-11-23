@@ -15,27 +15,31 @@
 
 	</div>
 
-    <div>
-        <b>Start X:</b>
-        <input type="text" name="x" placeholder="Search..." id="searchBoxStartX" v-on:change="search">
-        <b>Start Y:</b>
-        <input type="text" name="y" placeholder="Search..." id="searchBoxStartY" v-on:change="search">
-        <b>End X:</b>
-        <input type="text" name="x" placeholder="Search..." id="searchBoxEndX" v-on:change="search">
-        <b>End X:</b>
-        <input type="text" name="y" placeholder="Search..." id="searchBoxEndY" v-on:change="search"><br>
-    </div>
-    <div>
-        <b>Date 1:</b>
-        <input type="text" name="date1" placeholder="YYYY-MM-DD HH:MM" id="date1">
-        <b>Date 2:</b>
-        <input type="text" name="date2" placeholder="YYYY-MM-DD HH:MM" id="date2">
-        <button type="button" v-on:click="time">Time Frame!</button><br>
-    </div>
+
 
 <!-- Active Routes Table -->
     <div class="routeTable" id="routeTableId">
         <h1>List of Active Routes</h1>
+
+        <div class="searchCoordinate">
+            <b>Start X:</b>
+            <input type="text" name="x" placeholder="Search..." id="searchBoxStartX" v-on:change="search">
+            <b>Start Y:</b>
+            <input type="text" name="y" placeholder="Search..." id="searchBoxStartY" v-on:change="search">
+            <b>End X:</b>
+            <input type="text" name="x" placeholder="Search..." id="searchBoxEndX" v-on:change="search">
+            <b>End X:</b>
+            <input type="text" name="y" placeholder="Search..." id="searchBoxEndY" v-on:change="search"><br>
+        </div>
+        <div>
+            <b>Date 1:</b>
+            <input type="text" name="date1" placeholder="YYYY-MM-DD HH:MM" id="date1">
+            <b>Date 2:</b>
+            <input type="text" name="date2" placeholder="YYYY-MM-DD HH:MM" id="date2">
+            <button type="button" v-on:click="time">Time Frame!</button><br>
+        </div>
+
+
         <table id="myTable">
             <tr>
                 <th v-on:click="sortName">Driver Name</th>
@@ -85,6 +89,10 @@
 }
 .topnav a:hover {
   color: red;
+}
+
+.searchCoordinate input{
+    width: 6%;
 }
 
 /*Routes table*/

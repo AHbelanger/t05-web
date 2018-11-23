@@ -89,7 +89,7 @@
   text-transform: uppercase;
 }
 .driverTable table {
-  margin-top: 3em;
+  margin-top: 0.2em;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;

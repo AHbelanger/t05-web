@@ -100,21 +100,7 @@ h1 {
     padding-top:1em;
 }
 
-/* Search Bar */
-.searchBar{
-    float: left;   
-    padding-left: 30.6%;  
-}
-
-/* Select menu */
-.selectMenu{
-    float: right;
-    padding-right: 30.5%;
-    padding-top: 0.3em;
-}
-
 /* Participants Table */
-
 .passengerTable table {
   margin-top: 0.2em;
   margin-left: auto;
