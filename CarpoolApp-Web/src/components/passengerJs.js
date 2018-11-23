@@ -82,7 +82,7 @@ export default {
         p4.totalKM = 57
         p5.totalKM = 115
 
-        p1.routes=[{"id":"4"}, {"id":"99"}, {"id":"17"}, {"id":"3"}]
+        p1.routes=[{"id":"4", "startX":"5", "startY":"22", "endX":"2", "endY":"42"}, {"id":"52", "startX":"1", "startY":"78", "endX":"43", "endY":"25"}, {"id":"21","startX":"3", "startY":"76", "endX":"9", "endY":"12"}]
 
         // // Sample initial content
         // this.passengers = [p1, p2, p3, p4, p5]
@@ -195,6 +195,10 @@ export default {
             }
             this.searchPassengers = newPassengers
         },
+        routeInfo: function(route){
+            alert("ID: " + route.id + "\nStart: (" + route.startX + ", " + route.startY + ")" + "\nEnd: (" + route.endX + ", " + route.endY + ")")
+        },
+        
         //Display active or all passengers
         select: function(){
             var state = document.getElementById("selectActive").value.toLowerCase();

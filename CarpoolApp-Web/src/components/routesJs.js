@@ -76,7 +76,7 @@ export default {
         r3.startY = 6
         r3.endX = 10
         r3.endY = 12
-        r3.date = new Date("2018-10-20 5:10")
+        r3.date = new Date("2018-10-20 8:10")
 
         r4.driverName = "Roger"
         r4.startX = 53
@@ -246,7 +246,7 @@ export default {
 
             var newRoutes = []
 
-            for(var i = 0; i < this.routes.length; i++)
+            for(var i = 0; i < this.searchRoutes.length; i++)
             {
                 var curDate = this.routes[i].date
 

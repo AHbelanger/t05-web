@@ -50,7 +50,7 @@ export default {
             p1.name = "An Khang"
             p1.averagePrice = 342
             p1.totalKM = 134
-            p1.routes=[{"id":"4", "x":"5"}, {"id":"99", "x":"4"}, {"id":"17", "x":"32"}, {"id":"3", "x":"52"}]
+            p1.routes=[{"id":"4", "startX":"5", "startY":"22", "endX":"2", "endY":"42"}, {"id":"99", "startX":"1", "startY":"78", "endX":"43", "endY":"25"}, {"id":"21","startX":"3", "startY":"76", "endX":"9", "endY":"12"}]
            
             const p2 = new Driver("2")
             p2.name = "Antoine"
@@ -178,7 +178,24 @@ export default {
             this.searchDrivers = newDrivers;
         },
         routeInfo: function(route){
-            alert("ID: " + route.id + "\nX: " + route.x)
+            alert("ID: " + route.id + "\nStart: (" + route.startX + ", " + route.startY + ")" + "\nEnd: (" + route.endX + ", " + route.endY + ")")
+        },
+        
+        //Display active or all drivers
+        select: function(){
+            var state = document.getElementById("selectActive").value.toLowerCase();
+            if(state == "all"){
+                this.search()
+            } else {
+                var activeDrivers = []
+              
+                for(var i = 0; i < this.searchDrivers.length; i++){
+                    if(this.searchDrivers[i].routes != 0){
+                        activeDrivers.push(this.searchDrivers[i])
+                    }
+                }
+                this.searchDrivers = activeDrivers;
+            }
         }
     }  
 }

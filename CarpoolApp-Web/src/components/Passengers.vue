@@ -43,9 +43,9 @@
                 <td>{{ passenger.id }}</td>
                 <td>{{ passenger.averagePrice }}</td>
                 <td>{{ passenger.totalKM }}</td>
-                <td id="routes">
+                <td class="routeList" id="routes">
                     <ul>
-                        <li v-for="route in passenger.routes">
+                        <li v-for="route in passenger.routes" v-on:click="routeInfo(route)">
                             {{route.id}}
                         </li>
                     </ul>
@@ -126,6 +126,10 @@ td {
 
 .routes {
     text-align: left;
+}
+
+.routeList li:hover{
+  color: blue;
 }
 </style>
 
